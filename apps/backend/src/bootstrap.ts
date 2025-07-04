@@ -9,7 +9,7 @@ import cookieParser from "cookie-parser";
 function setMiddlewares(app: Express) {
   app.use(
     cors({
-      origin: "*",
+      origin: "http://localhost:3000",
     })
   );
   app.use(express.json());
@@ -20,8 +20,8 @@ function setMiddlewares(app: Express) {
 
 function setRoutes(app: Express) {
   // Health Check
-  app.get("/", (_req: Request, res: Response) => {
-    res.status(200).json(apiResponse(true, "Finance Manager API is live"));
+  app.get("/api/health", (_req: Request, res: Response) => {
+    res.status(200).json(apiResponse(true, "ok"));
   });
 
   // Public Route

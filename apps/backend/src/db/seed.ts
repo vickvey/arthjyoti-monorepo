@@ -1,6 +1,6 @@
 import { db } from "./index";
 import { users, categories, transactions } from "./schema";
-import { generateUUID } from "@/utils";
+import { generateUUID } from "@/utils/generate-uuid";
 
 async function main() {
   const userId = generateUUID();
