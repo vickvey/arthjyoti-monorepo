@@ -2,6 +2,7 @@ packages:
   - apps/*
 
 onlyBuiltDependencies:
+  - '@scarf/scarf'
   - '@tailwindcss/oxide'
   - argon2
   - esbuild

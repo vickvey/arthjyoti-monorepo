@@ -11,7 +11,7 @@
     "dev": "concurrently \"pnpm run dev:frontend\" \"pnpm run dev:backend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "packageManager": "pnpm@10.12.3",
+  "packageManager": "pnpm@10.12.4",
   "devDependencies": {
     "concurrently": "^8.0.1"
   }

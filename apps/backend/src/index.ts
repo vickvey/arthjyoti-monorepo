@@ -1,5 +1,7 @@
-import { configDotenv } from "dotenv";
-configDotenv();
+import { config } from "dotenv";
+config({
+  path: ".env",
+});
 import { createApp } from "./bootstrap";
 import Logger from "@/utils/logger";
 import { connectToSQLiteDatabase } from "./db";

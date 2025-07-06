@@ -5,11 +5,12 @@ import { errorHandler } from "@/middlewares/error-handler";
 import morganMiddleware from "./middlewares/morgan-middleware";
 import authRouter from "@/routes/auth-routes";
 import cookieParser from "cookie-parser";
+import { setupSwagger } from "./swagger";
 
 function setMiddlewares(app: Express) {
   app.use(
     cors({
-      origin: "http://localhost:3000",
+      origin: "*",
     })
   );
   app.use(express.json());
@@ -47,6 +48,9 @@ function createApp(): Express {
 
   // Glue necessary middleware
   setMiddlewares(app);
+
+  // Setup Swagger API Docs
+  setupSwagger(app);
 
   // Glue custom routes
   setRoutes(app);
